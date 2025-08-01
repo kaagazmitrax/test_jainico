@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jainico - Metal Pretreatment & Specialty Chemicals</title>
+    <meta name="description" content="With over 55 years of experience, JAINICO is a major player in Metal Pretreatment & Specialty Chemicals, offering a wide range of solutions for various industries.">
+    <link rel="icon" type="image/x-icon" href="https://placehold.co/32x32/ff007f/FFFFFF?text=J">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom Styles & Colors */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7; /* Soft White */
+            color: #111111; /* Charcoal Black */
+        }
+        .bg-primary-pink { background-color: #ff007f; }
+        .text-primary-pink { color: #ff007f; }
+        .hover\:bg-primary-pink-dark:hover { background-color: #e60072; }
+        .hover\:text-primary-pink:hover { color: #ff007f; }
+        
+        .bg-eco-green { background-color: #1c8c39; }
+        .text-eco-green { color: #1c8c39; }
+        
+        .bg-charcoal-black { background-color: #111111; }
+        .text-charcoal-black { color: #111111; }
+
+        .bg-soft-white { background-color: #f7f7f7; }
+        .text-soft-white { color: #f7f7f7; }
+        
+        .bg-light-grey { background-color: #e5e5e5; }
+        .border-light-grey { border-color: #e5e5e5; }
+        
+        .cta-btn {
+            transition: all 0.3s ease;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .industry-card {
+            transition: all 0.3s ease;
+        }
+        .industry-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        .stat {
+            transition: all 0.3s ease;
+        }
+        .stat:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .stat h3 {
+            font-weight: 800;
+        }
+        /* Dropdown styles */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        /* Timeline styles */
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background-color: #ff007f; /* Primary Pink */
+        }
+        /* Make elements for animation initially invisible */
+        .animate-on-scroll {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="bg-soft-white text-charcoal-black">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50" id="navbar">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold text-charcoal-black">Jainico<span class="text-primary-pink">.</span></a>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="text-charcoal-black hover:text-primary-pink">Home</a>
+                <!-- About Us Dropdown -->
+                <div class="relative dropdown">
+                    <button class="text-charcoal-black hover:text-primary-pink focus:outline-none">About Us <i class="fas fa-chevron-down fa-xs"></i></button>
+                    <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md mt-2 py-2 w-48 z-10">
+                        <a href="#about" class="block px-4 py-2 text-charcoal-black hover:bg-pink-50 hover:text-primary-pink">Our Story</a>
+                        <a href="#mission-vision" class="block px-4 py-2 text-charcoal-black hover:bg-pink-50 hover:text-primary-pink">Mission & Vision</a>
+                        <a href="#team" class="block px-4 py-2 text-charcoal-black hover:bg-pink-50 hover:text-primary-pink">Our Team</a>
+                        <a href="#infrastructure" class="block px-4 py-2 text-charcoal-black hover:bg-pink-50 hover:text-primary-pink">Infrastructure</a>
+                        <a href="#journey" class="block px-4 py-2 text-charcoal-black hover:bg-pink-50 hover:text-primary-pink">Our Journey</a>
+                    </div>
+                </div>
+                <a href="#products" class="text-charcoal-black hover:text-primary-pink">Products</a>
+                <a href="#industries" class="text-charcoal-black hover:text-primary-pink">Industries</a>
+                <a href="#careers" class="text-charcoal-black hover:text-primary-pink">Careers</a>
+                <a href="#contact" class="text-charcoal-black hover:text-primary-pink">Contact</a>
+                <a href="#contact" class="bg-primary-pink text-white py-2 px-4 rounded-full cta-btn hover:bg-primary-pink-dark">Get Quote</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-charcoal-black focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4">
+            <a href="#home" class="block py-2 px-6 text-charcoal-black hover:bg-pink-50">Home</a>
+            <a href="#about" class="block py-2 px-6 text-charcoal-black hover:bg-pink-50">About</a>
+            <a href="#products" class="block py-2 px-6 text-charcoal-black hover:bg-pink-50">Products</a>
+            <a href="#industries" class="block py-2 px-6 text-charcoal-black hover:bg-pink-50">Industries</a>
+            <a href="#careers" class="block py-2 px-6 text-charcoal-black hover:bg-pink-50">Careers</a>
+            <a href="#contact" class="block py-2 px-6 text-charcoal-black hover:bg-pink-50">Contact</a>
+            <div class="px-6 mt-2">
+                <a href="#contact" class="block w-full text-center bg-primary-pink text-white py-2 px-4 rounded-full cta-btn hover:bg-primary-pink-dark">Get Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-charcoal-black text-soft-white pt-20 pb-12 md:pt-32 md:pb-24">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Chemistry for a <span class="text-eco-green">Green</span> Future</h1>
+                    <p class="text-gray-300 mb-8">Pioneering metal pretreatment and specialty chemicals for over 55 years. We deliver cost-effective, high-performance, and environmentally friendly solutions across India.</p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#products" class="bg-primary-pink text-white py-3 px-8 rounded-full text-lg font-semibold cta-btn hover:bg-primary-pink-dark">Explore Products</a>
+                        <a href="#contact" class="bg-light-grey text-charcoal-black py-3 px-8 rounded-full text-lg font-semibold cta-btn hover:bg-gray-400">Contact Us</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.pexels.com/photos/3227986/pexels-photo-3227986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Chemical engineering lab" class="rounded-lg shadow-2xl" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Jainico+Lab';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Intro -->
+    <section id="about" class="py-20 bg-soft-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Manufacturing facility" class="rounded-lg shadow-xl" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Our+Facility';">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-bold text-primary-pink mb-4">About Jainico</h2>
+                    <p class="text-charcoal-black/80 mb-6">With more than 55 years of experience, JAINICO is a major player in Metal Pretreatment & Specialty Chemicals. Our organization is professionally managed and fully equipped with testing and quality control laboratories to ensure consistent quality and optimum performance. We manufacture a diverse range of Pre-treatment Chemicals for iron, steel, zinc, and aluminum, ensuring excellent paint bonding and corrosion resistance.</p>
+                    <div id="stats-counter" class="grid grid-cols-2 gap-6 mb-8 text-center">
+                        <div class="stat bg-white p-4 rounded-lg shadow">
+                            <h3 class="text-4xl text-primary-pink" data-target="55">0</h3>
+                            <p class="text-charcoal-black/70">Years of Experience</p>
+                        </div>
+                        <div class="stat bg-white p-4 rounded-lg shadow">
+                            <h3 class="text-4xl text-primary-pink">ISO</h3>
+                            <p class="text-charcoal-black/70">9001:2015 Certified</p>
+                        </div>
+                        <div class="stat bg-white p-4 rounded-lg shadow">
+                            <h3 class="text-4xl text-primary-pink">PAN</h3>
+                            <p class="text-charcoal-black/70">India Presence</p>
+                        </div>
+                        <div class="stat bg-white p-4 rounded-lg shadow">
+                            <h3 class="text-4xl text-primary-pink" data-target="2">0</h3>
+                            <p class="text-charcoal-black/70">Manufacturing Plants</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Mission & Vision -->
+    <section id="mission-vision" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div class="animate-on-scroll" data-animation="animate__fadeInUp">
+                    <i class="fas fa-rocket fa-3x text-primary-pink mb-4"></i>
+                    <h3 class="text-3xl font-bold text-primary-pink mb-4">Our Mission</h3>
+                    <p class="text-charcoal-black/80 max-w-md mx-auto">To achieve and sustain market leadership in each of our business sectors by providing value, innovation, and service to our customers.</p>
+                </div>
+                <div class="animate-on-scroll" data-animation="animate__fadeInUp" data-delay="200">
+                    <i class="fas fa-eye fa-3x text-primary-pink mb-4"></i>
+                    <h3 class="text-3xl font-bold text-primary-pink mb-4">Our Vision</h3>
+                    <p class="text-charcoal-black/80 max-w-md mx-auto">In each of our business categories, to be the most well-known corporation in India.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-soft-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 animate-on-scroll" data-animation="animate__fadeInDown">
+                <h2 class="text-4xl font-bold text-primary-pink">Our Chemical Solutions</h2>
+                <p class="text-lg text-charcoal-black/80 mt-2">A complete range of pretreatment chemical solutions.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="animate__fadeInUp">
+                    <h3 class="text-xl font-bold text-primary-pink mb-3">Degreasing Solutions</h3>
+                    <ul class="space-y-2 text-charcoal-black list-disc list-inside">
+                        <li>Ambient to Hot Temperature Degreasing</li>
+                        <li>Low & Medium Temperature Degreasers</li>
+                        <li>Spray & Dip Application Chemicals</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="animate__fadeInUp" data-delay="100">
+                    <h3 class="text-xl font-bold text-primary-pink mb-3">Phosphating Solutions</h3>
+                     <ul class="space-y-2 text-charcoal-black list-disc list-inside">
+                        <li>Tri-Cationic & Di-Cationic Zinc Phosphate</li>
+                        <li>Calcium Modified Zinc Phosphate</li>
+                        <li>Iron & Manganese Phosphating</li>
+                        <li>Heavy Zinc Phosphate for Cold Extrusion</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="animate__fadeInUp" data-delay="200">
+                    <h3 class="text-xl font-bold text-primary-pink mb-3">Conversion & Nano Coatings</h3>
+                    <ul class="space-y-2 text-charcoal-black list-disc list-inside">
+                        <li>Zirconium Base Nano Coatings (PHICOAT)</li>
+                        <li>Chrome-Free Coatings for Aluminium</li>
+                        <li>Golden Yellow Chromate Conversion</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="animate__fadeInUp">
+                    <h3 class="text-xl font-bold text-primary-pink mb-3">Derusting Solutions</h3>
+                     <ul class="space-y-2 text-charcoal-black list-disc list-inside">
+                        <li>Mixed Acid & Phosphoric Based</li>
+                        <li>Degreasing cum Derusting Chemicals</li>
+                        <li>Brighteners for Brass</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="animate__fadeInUp" data-delay="100">
+                    <h3 class="text-xl font-bold text-primary-pink mb-3">Passivation & Sealer Solutions</h3>
+                     <ul class="space-y-2 text-charcoal-black list-disc list-inside">
+                        <li>Chrome & Non-Chrome Based Passivation</li>
+                        <li>Zirconium Base Sealers</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="animate__fadeInUp" data-delay="200">
+                    <h3 class="text-xl font-bold text-primary-pink mb-3">Other Solutions</h3>
+                     <ul class="space-y-2 text-charcoal-black list-disc list-inside">
+                        <li>Liquid Accelerators & Additives</li>
+                        <li>Surface Activation Chemicals</li>
+                        <li>Touch-up Aerosol Paints</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section id="industries" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 animate-on-scroll" data-animation="animate__fadeInDown">
+                <h2 class="text-4xl font-bold text-primary-pink">Industries We Serve</h2>
+                <p class="text-lg text-charcoal-black/80 mt-2">Providing specialized coating solutions across a wide range of sectors.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
+                <div class="p-6 bg-soft-white rounded-lg industry-card animate-on-scroll" data-animation="animate__bounceIn">
+                    <i class="fas fa-car fa-3x text-primary-pink mb-3"></i>
+                    <h3 class="font-semibold text-lg">Automotive</h3>
+                </div>
+                <div class="p-6 bg-soft-white rounded-lg industry-card animate-on-scroll" data-animation="animate__bounceIn" data-delay="100">
+                    <i class="fas fa-truck-monster fa-3x text-primary-pink mb-3"></i>
+                    <h3 class="font-semibold text-lg">Heavy Equipment</h3>
+                </div>
+                <div class="p-6 bg-soft-white rounded-lg industry-card animate-on-scroll" data-animation="animate__bounceIn" data-delay="200">
+                    <i class="fas fa-building fa-3x text-primary-pink mb-3"></i>
+                    <h3 class="font-semibold text-lg">Architecture</h3>
+                </div>
+                <div class="p-6 bg-soft-white rounded-lg industry-card animate-on-scroll" data-animation="animate__bounceIn" data-delay="300">
+                    <i class="fas fa-blender-phone fa-3x text-primary-pink mb-3"></i>
+                    <h3 class="font-semibold text-lg">Appliances</h3>
+                </div>
+                <div class="p-6 bg-soft-white rounded-lg industry-card animate-on-scroll" data-animation="animate__bounceIn" data-delay="400">
+                    <i class="fas fa-microchip fa-3x text-primary-pink mb-3"></i>
+                    <h3 class="font-semibold text-lg">Electronics</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guiding Principles / Core Values -->
+    <section id="why-us" class="py-20 bg-soft-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 animate-on-scroll" data-animation="animate__fadeInDown">
+                <h2 class="text-4xl font-bold text-primary-pink">Our Core Values</h2>
+                <p class="text-lg text-charcoal-black/80 mt-2">The principles that drive our commitment to excellence.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <div class="text-center p-6 animate-on-scroll" data-animation="animate__fadeInUp">
+                    <div class="flex items-center justify-center h-20 w-20 rounded-full bg-pink-100 text-primary-pink mx-auto mb-4">
+                        <i class="fas fa-users fa-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-pink mb-2">Commitment to Customers</h3>
+                </div>
+                <div class="text-center p-6 animate-on-scroll" data-animation="animate__fadeInUp" data-delay="100">
+                    <div class="flex items-center justify-center h-20 w-20 rounded-full bg-pink-100 text-primary-pink mx-auto mb-4">
+                        <i class="fas fa-sync-alt fa-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-pink mb-2">Constant Improvement</h3>
+                </div>
+                <div class="text-center p-6 animate-on-scroll" data-animation="animate__fadeInUp" data-delay="200">
+                    <div class="flex items-center justify-center h-20 w-20 rounded-full bg-pink-100 text-primary-pink mx-auto mb-4">
+                        <i class="fas fa-shield-alt fa-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-pink mb-2">Integrity</h3>
+                </div>
+                <div class="text-center p-6 animate-on-scroll" data-animation="animate__fadeInUp" data-delay="300">
+                    <div class="flex items-center justify-center h-20 w-20 rounded-full bg-pink-100 text-primary-pink mx-auto mb-4">
+                        <i class="fas fa-bolt fa-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-pink mb-2">Boldness</h3>
+                </div>
+                <div class="text-center p-6 animate-on-scroll" data-animation="animate__fadeInUp" data-delay="400">
+                    <div class="flex items-center justify-center h-20 w-20 rounded-full bg-pink-100 text-primary-pink mx-auto mb-4">
+                        <i class="fas fa-handshake fa-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-pink mb-2">Trust</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infrastructure Section -->
+    <section id="infrastructure" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 animate-on-scroll" data-animation="animate__fadeInDown">
+                <h2 class="text-4xl font-bold text-primary-pink">Our Infrastructure</h2>
+                <p class="text-lg text-charcoal-black/80 mt-2">State-of-the-art facilities to deliver unparalleled quality.</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 animate-on-scroll" data-animation="animate__fadeInLeft">
+                    <h3 class="text-2xl font-bold text-primary-pink mb-4">Advanced Manufacturing & R&D</h3>
+                    <p class="text-charcoal-black/80 mb-4">Our facilities in Gurgaon and Pune are equipped with the latest machinery for automated coating, pre-treatment, and quality testing. This allows us to handle large-scale production while maintaining precision. Our dedicated R&D lab in New Delhi focuses on innovation and developing next-generation, eco-friendly products.</p>
+                    <ul class="space-y-2 text-charcoal-black">
+                        <li><i class="fas fa-check text-primary-pink mr-2"></i>Automated Phosphating & Coating Lines</li>
+                        <li><i class="fas fa-check text-primary-pink mr-2"></i>RoHS & REACH Compliant Products</li>
+                        <li><i class="fas fa-check text-primary-pink mr-2"></i>In-house R&D and Quality Control Labs</li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 animate-on-scroll" data-animation="animate__zoomIn">
+                     <img src="https://images.pexels.com/photos/2228561/pexels-photo-2228561.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Modern factory" class="rounded-lg shadow-xl" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Infrastructure';">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Team Section -->
+    <section id="team" class="py-20 bg-soft-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 animate-on-scroll" data-animation="animate__fadeInDown">
+                <h2 class="text-4xl font-bold text-primary-pink">Meet Our Expert Team</h2>
+                <p class="text-lg text-charcoal-black/80 mt-2">The dedicated professionals behind our success.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="text-center bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="animate__jackInTheBox">
+                    <img src="https://placehold.co/150x150/E2E8F0/4A5568?text=CEO" alt="CEO" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white shadow-lg">
+                    <h3 class="text-xl font-bold text-primary-pink">Person's Name</h3>
+                    <p class="text-gray-500">Founder & CEO</p>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="text-center bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="animate__jackInTheBox" data-delay="100">
+                    <img src="https://placehold.co/150x150/E2E8F0/4A5568?text=Head" alt="Head of Production" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white shadow-lg">
+                    <h3 class="text-xl font-bold text-primary-pink">Person's Name</h3>
+                    <p class="text-gray-500">Head of Production</p>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="text-center bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="animate__jackInTheBox" data-delay="200">
+                    <img src="https://placehold.co/150x150/E2E8F0/4A5568?text=R%26D" alt="Head of R&D" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white shadow-lg">
+                    <h3 class="text-xl font-bold text-primary-pink">Person's Name</h3>
+                    <p class="text-gray-500">Head of R&D</p>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="text-center bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="animate__jackInTheBox" data-delay="300">
+                    <img src="https://placehold.co/150x150/E2E8F0/4A5568?text=Sales" alt="Sales Director" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white shadow-lg">
+                    <h3 class="text-xl font-bold text-primary-pink">Person's Name</h3>
+                    <p class="text-gray-500">Sales Director</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Journey Section -->
+    <section id="journey" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll" data-animation="animate__fadeInDown">
+                <h2 class="text-4xl font-bold text-primary-pink">Our Journey</h2>
+                <p class="text-lg text-charcoal-black/80 mt-2">Milestones that have shaped our 55+ year story of growth and innovation.</p>
+            </div>
+            <div class="relative timeline-container max-w-2xl mx-auto">
+                <!-- Milestone 1 -->
+                <div class="mb-8 flex justify-between items-center w-full animate-on-scroll" data-animation="animate__fadeInRight">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-primary-pink shadow-xl w-10 h-10 rounded-full">
+                        <i class="fas fa-flag-checkered text-white mx-auto"></i>
+                    </div>
+                    <div class="order-1 bg-pink-100 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                        <h3 class="font-bold text-primary-pink text-xl">1970 - Foundation</h3>
+                        <p class="text-sm leading-snug tracking-wide text-charcoal-black/80">Jainico was founded with a vision to provide top-tier coating services.</p>
+                    </div>
+                </div>
+                <!-- Milestone 2 -->
+                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full animate-on-scroll" data-animation="animate__fadeInLeft">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-primary-pink shadow-xl w-10 h-10 rounded-full">
+                        <i class="fas fa-industry text-white mx-auto"></i>
+                    </div>
+                    <div class="order-1 bg-light-grey rounded-lg shadow-xl w-5/12 px-6 py-4">
+                        <h3 class="font-bold text-primary-pink text-xl">1995 - Gurgaon Plant</h3>
+                        <p class="text-sm leading-snug tracking-wide text-charcoal-black/80">Opened our first major manufacturing plant in Gurgaon to scale production.</p>
+                    </div>
+                </div>
+                <!-- Milestone 3 -->
+                 <div class="mb-8 flex justify-between items-center w-full animate-on-scroll" data-animation="animate__fadeInRight">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-primary-pink shadow-xl w-10 h-10 rounded-full">
+                        <i class="fas fa-certificate text-white mx-auto"></i>
+                    </div>
+                    <div class="order-1 bg-pink-100 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                        <h3 class="font-bold text-primary-pink text-xl">2015 - ISO 9001:2015</h3>
+                        <p class="text-sm leading-snug tracking-wide text-charcoal-black/80">Achieved the latest ISO certification, reinforcing our commitment to quality.</p>
+                    </div>
+                </div>
+                 <!-- Milestone 4 -->
+                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full animate-on-scroll" data-animation="animate__fadeInLeft">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-primary-pink shadow-xl w-10 h-10 rounded-full">
+                        <i class="fas fa-map-marked-alt text-white mx-auto"></i>
+                    </div>
+                    <div class="order-1 bg-light-grey rounded-lg shadow-xl w-5/12 px-6 py-4">
+                        <h3 class="font-bold text-primary-pink text-xl">2018 - Pune Plant</h3>
+                        <p class="text-sm leading-snug tracking-wide text-charcoal-black/80">Expanded with a new plant in Pune to better serve Western & Southern India.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="py-20 bg-soft-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-primary-pink animate-on-scroll" data-animation="animate__fadeInDown">Join Our Team</h2>
+            <p class="text-lg text-charcoal-black/80 mt-2 mb-8 animate-on-scroll" data-animation="animate__fadeInUp">We are always looking for talented individuals to join our growing family. Explore our open positions.</p>
+            <div class="max-w-2xl mx-auto text-left bg-white p-8 rounded-lg shadow-lg animate-on-scroll" data-animation="animate__zoomIn">
+                <div class="border-b pb-4 mb-4">
+                    <h3 class="text-xl font-semibold text-primary-pink">Production Supervisor</h3>
+                    <p class="text-gray-500">Gurgaon / Pune | Full-time</p>
+                </div>
+                 <div class="border-b pb-4 mb-4">
+                    <h3 class="text-xl font-semibold text-primary-pink">Quality Control Chemist</h3>
+                    <p class="text-gray-500">Gurgaon | Full-time</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-primary-pink">Sales Executive - Automotive</h3>
+                    <p class="text-gray-500">PAN India | Full-time</p>
+                </div>
+            </div>
+            <a href="mailto:careers@jainico.com" class="mt-8 inline-block bg-primary-pink text-white py-3 px-8 rounded-full text-lg font-semibold cta-btn hover:bg-primary-pink-dark animate-on-scroll" data-animation="animate__pulse">Send Your Resume</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-light-grey text-charcoal-black">
+        <div class="container mx-auto px-6 pt-16 pb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Footer Section 1: Logo & Social -->
+                <div class="footer-section">
+                    <h3 class="text-xl font-bold mb-4">Jainico<span class="text-primary-pink">.</span></h3>
+                    <p class="text-charcoal-black/70 mb-4">Chemistry for a Green Future. Your key partner for corrosion protection.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-charcoal-black/70 hover:text-primary-pink"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-charcoal-black/70 hover:text-primary-pink"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-charcoal-black/70 hover:text-primary-pink"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-charcoal-black/70 hover:text-primary-pink"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+                <!-- Footer Section 2: Quick Links -->
+                <div class="footer-section">
+                    <h4 class="text-lg font-semibold mb-4 text-primary-pink">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-charcoal-black/70 hover:text-primary-pink">Home</a></li>
+                        <li><a href="#about" class="text-charcoal-black/70 hover:text-primary-pink">About Us</a></li>
+                        <li><a href="#products" class="text-charcoal-black/70 hover:text-primary-pink">Products</a></li>
+                        <li><a href="#industries" class="text-charcoal-black/70 hover:text-primary-pink">Industries</a></li>
+                        <li><a href="#careers" class="text-charcoal-black/70 hover:text-primary-pink">Careers</a></li>
+                    </ul>
+                </div>
+                <!-- Footer Section 3: Locations -->
+                <div class="footer-section">
+                    <h4 class="text-lg font-semibold mb-4 text-primary-pink">Our Locations</h4>
+                    <div class="text-charcoal-black/70 space-y-4">
+                        <div>
+                            <p class="font-semibold">Gurgaon Plant:</p>
+                            <p>Plot No. 650-P, Pace City-2, Sector 37, Gurgaon 122001 (Haryana)</p>
+                        </div>
+                         <div>
+                            <p class="font-semibold">Pune Plant:</p>
+                            <p>7, Jawaharlal Nehru Ind. Estate, Gat No. 267/A/2 Pirangut, Mulshi, Pune 412115</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Section 4: Contact Info -->
+                <div class="footer-section">
+                    <h4 class="text-lg font-semibold mb-4 text-primary-pink">Contact Info</h4>
+                    <div class="text-charcoal-black/70 space-y-3">
+                        <p><i class="fas fa-globe mr-2 text-primary-pink"></i> www.jainico.com</p>
+                        <p><i class="fas fa-envelope mr-2 text-primary-pink"></i> info@jainico.com</p>
+                        <p><i class="fas fa-phone mr-2 text-primary-pink"></i> +91 [Your Phone Number]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-400 pt-6 text-center text-charcoal-black/60">
+                <p>&copy; 2025 Jainico. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919876543210?text=Hello!%20I'm%20interested%20in%20your%20chemical%20solutions." target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300">
+        <i class="fab fa-whatsapp fa-2x"></i>
+    </a>
+
+    <script>
+        // JavaScript for Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        const navLinks = document.querySelectorAll('#mobile-menu a, .dropdown-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                    mobileMenuButton.querySelector('i').classList.add('fa-bars');
+                }
+            });
+        });
+
+        // Add shadow to navbar on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // Animated Counter and Scroll Animations
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+        const statsCounters = document.querySelectorAll('#stats-counter h3[data-target]');
+        const speed = 200; // The lower the number, the faster the count
+
+        const startCounter = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            // Check if the counter has already been animated
+            if (counter.dataset.animated) return;
+            counter.dataset.animated = true; // Mark as animated
+
+            const updateCount = () => {
+                const count = +counter.innerText;
+                const increment = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 10);
+                } else {
+                    counter.innerText = target + (counter.dataset.target === '55' ? '+' : '');
+                }
+            };
+            updateCount();
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const target = entry.target;
+                const animation = target.dataset.animation || 'animate__fadeIn';
+                const delay = target.dataset.delay || 0;
+
+                if (entry.isIntersecting) {
+                    // Handle general animations
+                    if (target.classList.contains('animate-on-scroll')) {
+                        setTimeout(() => {
+                            target.style.opacity = 1;
+                            target.classList.add('animate__animated', animation);
+                        }, delay);
+                    }
+                    
+                    // Handle stats counter
+                    if (target.id === 'stats-counter') {
+                        statsCounters.forEach(counter => startCounter(counter));
+                    }
+                } else {
+                    // Reset animation when element leaves the viewport
+                     if (target.classList.contains('animate-on-scroll')) {
+                        target.style.opacity = 0;
+                        target.classList.remove('animate__animated', animation);
+                    }
+                }
+            });
+        }, {
+            threshold: 0.15 // Start when 15% of the element is visible
+        });
+
+        // Observe all elements that need animation
+        animatedElements.forEach(el => observer.observe(el));
+        observer.observe(document.getElementById('stats-counter'));
+
+    </script>
+
+</body>
+</html>
