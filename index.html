@@ -73,17 +73,6 @@
         .dropdown:hover .dropdown-menu {
             display: block;
         }
-        /* Timeline styles */
-        .timeline-container::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 0;
-            width: 4px;
-            height: 100%;
-            background-color: #ff007f; /* Primary Pink */
-        }
         /* Make elements for animation initially invisible */
         .animate-on-scroll {
             opacity: 0;
@@ -96,7 +85,10 @@
     <nav class="bg-white shadow-md sticky top-0 z-50" id="navbar">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="flex items-center">
-                <a href="#" class="text-2xl font-bold text-charcoal-black">Jainico<span class="text-primary-pink">.</span></a>
+                <a href="#">
+                    <!-- Replace 'your-logo.png' with the path to your logo file -->
+                    <img src="your-logo.png" alt="Jainico Logo" class="h-10 w-auto" onerror="this.onerror=null;this.outerHTML='<a href=\'#\' class=\'text-2xl font-bold text-charcoal-black\'>Jainico<span class=\'text-primary-pink\'>.</span></a>'">
+                </a>
             </div>
             <div class="hidden md:flex items-center space-x-6">
                 <a href="#home" class="text-charcoal-black hover:text-primary-pink">Home</a>
@@ -143,7 +135,7 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
-                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Chemistry for a <span class="text-eco-green">Green</span> Future</h1>
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Chemistry for a <span class="text-eco-green">Green Future</span></h1>
                     <p class="text-gray-300 mb-8">Pioneering metal pretreatment and specialty chemicals for over 55 years. We deliver cost-effective, high-performance, and environmentally friendly solutions across India.</p>
                     <div class="flex justify-center md:justify-start space-x-4">
                         <a href="#products" class="bg-primary-pink text-white py-3 px-8 rounded-full text-lg font-semibold cta-btn hover:bg-primary-pink-dark">Explore Products</a>
@@ -409,49 +401,60 @@
                 <h2 class="text-4xl font-bold text-primary-pink">Our Journey</h2>
                 <p class="text-lg text-charcoal-black/80 mt-2">Milestones that have shaped our 55+ year story of growth and innovation.</p>
             </div>
-            <div class="relative timeline-container max-w-2xl mx-auto">
+            <!-- Responsive Timeline -->
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Vertical Line -->
+                <div class="absolute top-0 h-full w-1 bg-primary-pink left-3 md:left-1/2 -translate-x-1/2"></div>
+                
                 <!-- Milestone 1 -->
-                <div class="mb-8 flex justify-between items-center w-full animate-on-scroll" data-animation="animate__fadeInRight">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-primary-pink shadow-xl w-10 h-10 rounded-full">
-                        <i class="fas fa-flag-checkered text-white mx-auto"></i>
-                    </div>
-                    <div class="order-1 bg-pink-100 rounded-lg shadow-xl w-5/12 px-6 py-4">
-                        <h3 class="font-bold text-primary-pink text-xl">1970 - Foundation</h3>
-                        <p class="text-sm leading-snug tracking-wide text-charcoal-black/80">Jainico was founded with a vision to provide top-tier coating services.</p>
+                <div class="relative mb-8 animate-on-scroll" data-animation="animate__fadeInUp">
+                    <div class="md:flex items-center md:justify-end md:text-right">
+                        <div class="md:w-1/2 md:pr-12">
+                            <div class="absolute top-1 left-3 w-6 h-6 rounded-full bg-primary-pink border-4 border-white md:left-1/2 -translate-x-1/2"></div>
+                            <div class="bg-pink-100 rounded-lg shadow-md p-6 ml-10 md:ml-0">
+                                <h3 class="font-bold text-primary-pink text-xl mb-1">1970 - Foundation</h3>
+                                <p class="text-sm text-charcoal-black/80">Jainico was founded with a vision to provide top-tier coating services.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Milestone 2 -->
-                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full animate-on-scroll" data-animation="animate__fadeInLeft">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-primary-pink shadow-xl w-10 h-10 rounded-full">
-                        <i class="fas fa-industry text-white mx-auto"></i>
-                    </div>
-                    <div class="order-1 bg-light-grey rounded-lg shadow-xl w-5/12 px-6 py-4">
-                        <h3 class="font-bold text-primary-pink text-xl">1995 - Gurgaon Plant</h3>
-                        <p class="text-sm leading-snug tracking-wide text-charcoal-black/80">Opened our first major manufacturing plant in Gurgaon to scale production.</p>
+                <div class="relative mb-8 animate-on-scroll" data-animation="animate__fadeInUp">
+                    <div class="md:flex items-center">
+                        <div class="md:w-1/2 md:pl-12">
+                             <div class="absolute top-1 left-3 w-6 h-6 rounded-full bg-primary-pink border-4 border-white md:left-1/2 -translate-x-1/2"></div>
+                            <div class="bg-light-grey rounded-lg shadow-md p-6 ml-10 md:ml-0">
+                                <h3 class="font-bold text-primary-pink text-xl mb-1">1995 - Gurgaon Plant</h3>
+                                <p class="text-sm text-charcoal-black/80">Opened our first major manufacturing plant in Gurgaon to scale production.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Milestone 3 -->
-                 <div class="mb-8 flex justify-between items-center w-full animate-on-scroll" data-animation="animate__fadeInRight">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-primary-pink shadow-xl w-10 h-10 rounded-full">
-                        <i class="fas fa-certificate text-white mx-auto"></i>
-                    </div>
-                    <div class="order-1 bg-pink-100 rounded-lg shadow-xl w-5/12 px-6 py-4">
-                        <h3 class="font-bold text-primary-pink text-xl">2015 - ISO 9001:2015</h3>
-                        <p class="text-sm leading-snug tracking-wide text-charcoal-black/80">Achieved the latest ISO certification, reinforcing our commitment to quality.</p>
+                <div class="relative mb-8 animate-on-scroll" data-animation="animate__fadeInUp">
+                    <div class="md:flex items-center md:justify-end md:text-right">
+                        <div class="md:w-1/2 md:pr-12">
+                            <div class="absolute top-1 left-3 w-6 h-6 rounded-full bg-primary-pink border-4 border-white md:left-1/2 -translate-x-1/2"></div>
+                            <div class="bg-pink-100 rounded-lg shadow-md p-6 ml-10 md:ml-0">
+                                <h3 class="font-bold text-primary-pink text-xl mb-1">2015 - ISO 9001:2015</h3>
+                                <p class="text-sm text-charcoal-black/80">Achieved the latest ISO certification, reinforcing our commitment to quality.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                 <!-- Milestone 4 -->
-                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full animate-on-scroll" data-animation="animate__fadeInLeft">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-primary-pink shadow-xl w-10 h-10 rounded-full">
-                        <i class="fas fa-map-marked-alt text-white mx-auto"></i>
-                    </div>
-                    <div class="order-1 bg-light-grey rounded-lg shadow-xl w-5/12 px-6 py-4">
-                        <h3 class="font-bold text-primary-pink text-xl">2018 - Pune Plant</h3>
-                        <p class="text-sm leading-snug tracking-wide text-charcoal-black/80">Expanded with a new plant in Pune to better serve Western & Southern India.</p>
+
+                <!-- Milestone 4 -->
+                <div class="relative animate-on-scroll" data-animation="animate__fadeInUp">
+                    <div class="md:flex items-center">
+                         <div class="md:w-1/2 md:pl-12">
+                            <div class="absolute top-1 left-3 w-6 h-6 rounded-full bg-primary-pink border-4 border-white md:left-1/2 -translate-x-1/2"></div>
+                            <div class="bg-light-grey rounded-lg shadow-md p-6 ml-10 md:ml-0">
+                                <h3 class="font-bold text-primary-pink text-xl mb-1">2018 - Pune Plant</h3>
+                                <p class="text-sm text-charcoal-black/80">Expanded with a new plant in Pune to better serve Western & Southern India.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
