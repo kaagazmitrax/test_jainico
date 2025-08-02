@@ -92,9 +92,9 @@
             <div class="hidden md:flex items-center space-x-6">
                 <a href="#home" class="text-charcoal-black hover:text-primary-pink">Home</a>
                 <!-- Company Dropdown -->
-                <div class="relative dropdown">
+                <div class="relative dropdown pb-4 -mb-4">
                     <button class="text-charcoal-black hover:text-primary-pink focus:outline-none">Company <i class="fas fa-chevron-down fa-xs"></i></button>
-                    <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md mt-2 py-2 w-56 z-10">
+                    <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md mt-4 py-2 w-56 z-10">
                         <a href="#about" class="block px-4 py-2 text-charcoal-black hover:bg-pink-50 hover:text-primary-pink">Our Story</a>
                         <a href="#mission-vision" class="block px-4 py-2 text-charcoal-black hover:bg-pink-50 hover:text-primary-pink">Mission & Vision</a>
                         <a href="#team" class="block px-4 py-2 text-charcoal-black hover:bg-pink-50 hover:text-primary-pink">Our Team</a>
@@ -118,7 +118,7 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white pb-4">
             <a href="#home" class="block py-2 px-6 text-charcoal-black hover:bg-pink-50">Home</a>
-            <a href="#about" class="block py-2 px-6 text-charcoal-black hover:bg-pink-50">About</a>
+            <a href="#about" class="block py-2 px-6 text-charcoal-black hover:bg-pink-50">Company</a>
             <a href="products.html" class="block py-2 px-6 text-charcoal-black hover:bg-pink-50">Products</a>
             <a href="#industries" class="block py-2 px-6 text-charcoal-black hover:bg-pink-50">Industries</a>
             <a href="#careers" class="block py-2 px-6 text-charcoal-black hover:bg-pink-50">Careers</a>
@@ -130,19 +130,25 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-charcoal-black text-soft-white pt-20 pb-12 md:pt-32 md:pb-24">
-        <div class="container mx-auto px-6">
+    <section id="home" class="relative text-soft-white h-[70vh] md:h-screen flex items-center justify-center">
+        <!-- Video Background -->
+        <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+             <!-- Updated video path -->
+            <source src="videos/hero-background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Overlay -->
+        <div class="absolute top-0 left-0 w-full h-full bg-charcoal-black opacity-50 z-10"></div>
+        
+        <div class="container mx-auto px-6 relative z-20">
             <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                <div class="md:w-2/3 text-center md:text-left">
                     <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Chemistry for a <span class="text-eco-green">Green Future</span></h1>
-                    <p class="text-gray-300 mb-8">Pioneering metal pretreatment and specialty chemicals for over 55 years. We deliver cost-effective, high-performance, and environmentally friendly solutions across India.</p>
+                    <p class="text-gray-200 mb-8">Pioneering metal pretreatment and specialty chemicals for over 55 years. We deliver cost-effective, high-performance, and environmentally friendly solutions across India.</p>
                     <div class="flex justify-center md:justify-start space-x-4">
                         <a href="products.html" class="bg-primary-pink text-white py-3 px-8 rounded-full text-lg font-semibold cta-btn hover:bg-primary-pink-dark">Explore Products</a>
                         <a href="#contact" class="bg-light-grey text-charcoal-black py-3 px-8 rounded-full text-lg font-semibold cta-btn hover:bg-gray-400">Contact Us</a>
                     </div>
-                </div>
-                <div class="md:w-1/2">
-                    <img src="https://images.pexels.com/photos/3227986/pexels-photo-3227986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Chemical engineering lab" class="rounded-lg shadow-2xl" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Jainico+Lab';">
                 </div>
             </div>
         </div>
